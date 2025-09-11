@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Pro Shop - Smart Home Security Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .product-card {
+      transition: all 0.3s ease;
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+    .badge {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+    }
+    .cart-count {
+      animation: pulse 0.5s ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-orange-50">
+
+  <!-- Enhanced Navbar -->
+<nav class="bg-gradient-to-r from-orange-600 to-orange-700 shadow-xl fixed w-full top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo / Brand -->
+      <a href="index.html" class="text-white font-extrabold text-xl flex items-center">
+        <i class="fas fa-shield-alt mr-2"></i>Safety Pro
+      </a>
+      
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white text-2xl" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+      
+      <!-- Navigation Links - Desktop -->
+      <ul class="hidden md:flex space-x-6 text-white font-semibold items-center">
+        <li><a href="index.html" class="hover:text-orange-200 transition">Home</a></li>
+        <li><a href="services.html" class="hover:text-orange-200 transition">Services</a></li>
+        <li><a href="shop.html" class="text-orange-200 border-b-2 border-white pb-1">Shop</a></li>
+        <li><a href="about.html" class="hover:text-orange-200 transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-orange-200 transition">Contact</a></li>
+        
+        <!-- Cart Icon -->
+        <li class="relative ml-2">
+          <button class="text-white hover:text-orange-200 transition" onclick="toggleCart()">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9M17 21a2 2 0 100-4 2 2 0 000 4zM9 21a2 2 0 100-4 2 2 0 000 4z"></path>
+            </svg>
+            <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- Mobile Menu - Hidden by default -->
+    <div class="md:hidden hidden bg-orange-700 border-t border-orange-600" id="mobileMenu">
+      <ul class="py-4 space-y-2">
+        <li><a href="index.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">Home</a></li>
+        <li><a href="services.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">Services</a></li>
+        <li><a href="shop.html" class="block px-4 py-2 text-orange-200 border-l-4 border-white">Shop</a></li>
+        <li><a href="about.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">About</a></li>
+        <li><a href="contact.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Paystack Payment Script -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<!-- Enhanced Hero Section -->
+<section class="relative bg-gradient-to-r from-orange-600 via-orange-700 to-red-600 text-white py-24 mt-16 overflow-hidden">
+  <div class="absolute inset-0 bg-black opacity-20"></div>
+  <div class="relative max-w-6xl mx-auto px-6 text-center">
+    <div class="inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+      <span class="text-sm font-semibold"><i class="fas fa-fire mr-1"></i>Premium Smart Home Collection</span>
+    </div>
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+      Smart Home <span class="text-yellow-300">Store</span>
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+      Transform your home with cutting-edge security and automation technology. 
+      Professional-grade products with expert installation support.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105">
+        <i class="fas fa-shopping-cart mr-2"></i>Shop Now
+      </button>
+      <button class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition">
+        <i class="fas fa-phone mr-2"></i>Get Consultation
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Filter & Search Section -->
+<section class="bg-white py-8 shadow-sm">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex flex-wrap gap-3">
+        <button class="filter-btn bg-orange-600 text-white px-6 py-2 rounded-full font-semibold" data-category="all">All Products</button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-orange-100" data-category="cameras"><i class="fas fa-video mr-2"></i>Cameras</button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-orange-100" data-category="locks"><i class="fas fa-lock mr-2"></i>Smart Locks</button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-orange-100" data-category="sensors"><i class="fas fa-exclamation-triangle mr-2"></i>Sensors</button>
+        <button class="filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full font-semibold hover:bg-orange-100" data-category="lighting"><i class="fas fa-lightbulb mr-2"></i>Lighting</button>
+      </div>
+      <div class="relative">
+        <input type="text" id="searchInput" placeholder="Search products..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-orange-500 w-64">
+        <svg class="absolute left-3 top-2.5 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Enhanced Products Section -->
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Premium Products</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Professional-grade smart home and security solutions with lifetime support</p>
+      </div>
+
+      <!-- Enhanced Product Grid -->
+      <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+        <!-- Premium CCTV Camera -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="cameras">
+          <div class="relative">
+            <img src="assets/cam.webp" alt="4K CCTV Camera" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="badge text-white text-xs px-3 py-1 rounded-full font-semibold">BESTSELLER</span>
+            </div>
+            <div class="absolute top-3 right-3">
+              <button class="bg-white bg-opacity-80 p-2 rounded-full hover:bg-opacity-100 transition">
+                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(127 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">4K Ultra HD CCTV Camera</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Night vision, motion detection, cloud storage, mobile alerts. Professional installation included.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 1,250</span>
+                <span class="text-sm text-gray-500 line-through ml-2">GHS 1,500</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('4K CCTV Camera', 1250)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Smart Door Lock -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="locks">
+          <div class="relative">
+            <img src="assets/gate.webp" alt="Smart Door Lock" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-semibold">NEW</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(89 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Biometric Smart Lock Pro</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Fingerprint, PIN, app control, auto-lock, battery backup. Works with all door types.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 1,800</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Smart Lock Pro', 1800)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Smart Lighting System -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="lighting">
+          <div class="relative">
+            <img src="assets/light.webp" alt="Smart Lighting" class="w-full h-56 object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(156 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Smart LED Lighting Kit</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Voice control, 16M colors, scheduling, energy saving. Complete home automation kit.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 950</span>
+                <span class="text-sm text-gray-500 line-through ml-2">GHS 1,200</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Smart Lighting Kit', 950)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Motion Sensor -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="sensors">
+          <div class="relative">
+            <img src="assets/sensor.webp" alt="Motion Sensor" class="w-full h-56 object-cover">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(203 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Smart Motion Sensor</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">PIR technology, wireless, long battery life, instant alerts. Perfect for security automation.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 320</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Motion Sensor', 320)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Solar Security Camera -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="cameras">
+          <div class="relative">
+            <img src="assets/solarcam.webp" alt="Solar Camera" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-green-500 text-white text-xs px-3 py-1 rounded-full font-semibold">ECO</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(94 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Solar Security Camera</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">100% wireless, solar powered, weatherproof, 2-way audio. Zero electricity costs.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 1,650</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Solar Camera', 1650)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Video Doorbell -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="cameras">
+          <div class="relative">
+            <img src="assets/camm.webp" alt="Video Doorbell" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="badge text-white text-xs px-3 py-1 rounded-full font-semibold">POPULAR</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(178 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">HD Video Doorbell Pro</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">1080p HD, 2-way talk, motion alerts, cloud recording. See who's at your door anywhere.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 1,150</span>
+                <span class="text-sm text-gray-500 line-through ml-2">GHS 1,350</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Video Doorbell Pro', 1150)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Smart Gate Motor -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="locks">
+          <div class="relative">
+            <img src="assets/PRODUCTS gate motor.jpg" alt="Smart Gate Motor" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-purple-500 text-white text-xs px-3 py-1 rounded-full font-semibold">PREMIUM</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(67 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Smart Gate Motor System</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Remote control, smartphone app, backup battery, obstacle detection. Professional installation included.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 3,500</span>
+                <span class="text-sm text-gray-500 line-through ml-2">GHS 4,200</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Smart Gate Motor', 3500)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Professional Security Camera -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="cameras">
+          <div class="relative">
+            <img src="assets/PRODUCTS camera.jpg" alt="Professional Security Camera" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-semibold">PRO</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(142 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Professional Security Camera</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">4K resolution, AI detection, weatherproof, 365-day recording. Commercial grade quality.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 2,200</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Professional Security Camera', 2200)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Smart Door Locks Set -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="locks">
+          <div class="relative">
+            <img src="assets/PRODUCTS locks.jpg" alt="Smart Door Locks" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">BUNDLE</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(98 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Smart Door Lock Bundle</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Complete set of smart locks, keypad entry, mobile app control, emergency keys included.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 2,800</span>
+                <span class="text-sm text-gray-500 line-through ml-2">GHS 3,400</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Smart Door Lock Bundle', 2800)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Advanced Motion Sensor -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="sensors">
+          <div class="relative">
+            <img src="assets/PRODUCTS motion sensor.jpg" alt="Advanced Motion Sensor" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-cyan-500 text-white text-xs px-3 py-1 rounded-full font-semibold">SMART</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(156 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Advanced Motion Sensor Pro</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">AI-powered detection, pet immunity, wireless connectivity, long-range coverage up to 15m.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 650</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Advanced Motion Sensor Pro', 650)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Alexa Smart Display -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="lighting">
+          <div class="relative">
+            <img src="assets/PRODUCTS alexa show.jpg" alt="Alexa Smart Display" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-indigo-500 text-white text-xs px-3 py-1 rounded-full font-semibold">VOICE</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(234 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Alexa Smart Display Hub</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Voice control center, 10" HD display, video calls, smart home control, music streaming.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 1,450</span>
+                <span class="text-sm text-gray-500 line-through ml-2">GHS 1,750</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Alexa Smart Display Hub', 1450)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Smart Lighting System Pro -->
+        <div class="product-card rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-category="lighting">
+          <div class="relative">
+            <img src="assets/light2.webp" alt="Smart Lighting Pro" class="w-full h-56 object-cover">
+            <div class="absolute top-3 left-3">
+              <span class="bg-yellow-500 text-white text-xs px-3 py-1 rounded-full font-semibold">ENERGY+</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <span class="text-sm text-gray-500">(189 reviews)</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Smart Lighting System Pro</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">Premium LED strips, color changing, music sync, energy efficient, whole home coverage.</p>
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <span class="text-2xl font-bold text-orange-600">GHS 1,850</span>
+              </div>
+              <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">In Stock</span>
+            </div>
+            <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105" onclick="addToCart('Smart Lighting System Pro', 1850)">
+              <i class="fas fa-shopping-cart mr-2"></i>Add to Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cartSidebar" class="fixed top-0 right-0 h-full w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+    <div class="p-6 border-b border-gray-200">
+      <div class="flex justify-between items-center">
+        <h2 class="text-2xl font-bold text-gray-800">Shopping Cart</h2>
+        <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div id="cartItems" class="p-6">
+      <div id="emptyCart" class="text-center py-12">
+        <i class="fas fa-shopping-cart text-6xl text-gray-300 mb-4"></i>
+        <p class="text-gray-500 text-lg">Your cart is empty</p>
+        <p class="text-gray-400 text-sm">Add some products to get started</p>
+      </div>
+    </div>
+    
+    <div id="cartFooter" class="hidden border-t border-gray-200 p-6 bg-gray-50">
+      <div class="mb-4">
+        <div class="flex justify-between items-center text-lg font-semibold">
+          <span>Total:</span>
+          <span id="cartTotal" class="text-orange-600">GHS 0</span>
+        </div>
+      </div>
+      <button onclick="initiatePayment()" class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 px-4 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105">
+        <i class="fas fa-credit-card mr-2"></i>Pay with Paystack
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div id="cartOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" onclick="toggleCart()"></div>
+
+  <!-- Trust Badges & Features -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div class="flex flex-col items-center">
+          <div class="bg-orange-100 p-4 rounded-full mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Lifetime Warranty</h3>
+          <p class="text-gray-600 text-sm">All products backed by comprehensive warranty</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="bg-orange-100 p-4 rounded-full mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Fast Installation</h3>
+          <p class="text-gray-600 text-sm">Professional setup within 24-48 hours</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="bg-orange-100 p-4 rounded-full mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">24/7 Support</h3>
+          <p class="text-gray-600 text-sm">Round-the-clock technical assistance</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="bg-orange-100 p-4 rounded-full mb-4">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+            </svg>
+          </div>
+          <h3 class="font-bold text-gray-800 mb-2">Best Prices</h3>
+          <p class="text-gray-600 text-sm">Competitive pricing with flexible payment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cart-sidebar" class="fixed right-0 top-0 h-full w-96 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
+    <div class="p-6 border-b">
+      <div class="flex justify-between items-center">
+        <h3 class="text-xl font-bold">Shopping Cart</h3>
+        <button onclick="toggleCart()" class="text-gray-500 hover:text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="cart-items" class="p-6 flex-1 overflow-y-auto">
+      <p class="text-gray-500 text-center">Your cart is empty</p>
+    </div>
+    <div class="border-t p-6">
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-lg font-bold">Total:</span>
+        <span id="cart-total" class="text-2xl font-bold text-orange-600">GHS 0</span>
+      </div>
+      <button class="w-full bg-gradient-to-r from-orange-600 to-orange-700 text-white py-3 rounded-xl font-semibold hover:from-orange-700 hover:to-orange-800 transition">
+        Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40" onclick="toggleCart()"></div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-shield-alt mr-2"></i>Safety Pro
+          </h3>
+          <p class="text-gray-300 mb-4">Your trusted partner for smart home security solutions in Ghana.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/safetypro_installations?igsh=enNwdWpsa29tZ2lm" target="_blank" class="text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@safetypro_installations?_t=ZM-8zdUZj5dp49&_r=1" target="_blank" class="text-gray-300 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Products</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#" class="hover:text-white transition">CCTV Cameras</a></li>
+            <li><a href="#" class="hover:text-white transition">Smart Locks</a></li>
+            <li><a href="#" class="hover:text-white transition">Lighting Systems</a></li>
+            <li><a href="#" class="hover:text-white transition">Security Sensors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact Info</h4>
+          <div class="space-y-2 text-gray-300">
+            <p><i class="fas fa-envelope mr-2"></i>safetyproinstallations@gmail.com</p>
+            <p><i class="fas fa-phone mr-2"></i>+233 24 123 4567</p>
+            <p><i class="fas fa-map-marker-alt mr-2"></i>Accra, Ghana</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 Safety Pro Installations. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    let cartTotal = 0;
+
+    function addToCart(productName, price) {
+      const existingItem = cart.find(item => item.name === productName);
+      
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({
+          name: productName,
+          price: price,
+          quantity: 1
+        });
+      }
+      
+      updateCartDisplay();
+      updateCartCount();
+      
+      // Show success animation
+      const button = event.target;
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fas fa-check mr-1"></i>Added!';
+      button.classList.add('bg-green-600');
+      
+      setTimeout(() => {
+        button.innerHTML = originalText;
+        button.classList.remove('bg-green-600');
+      }, 1500);
+    }
+
+    function updateCartDisplay() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotalElement = document.getElementById('cart-total');
+      
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<p class="text-gray-500 text-center">Your cart is empty</p>';
+        cartTotal = 0;
+      } else {
+        cartItems.innerHTML = cart.map(item => `
+          <div class="flex justify-between items-center py-3 border-b">
+            <div>
+              <h4 class="font-semibold">${item.name}</h4>
+              <p class="text-sm text-gray-600">Qty: ${item.quantity}</p>
+            </div>
+            <div class="text-right">
+              <p class="font-semibold">GHS ${(item.price * item.quantity).toLocaleString()}</p>
+              <button onclick="removeFromCart('${item.name}')" class="text-red-500 text-sm hover:text-red-700">Remove</button>
+            </div>
+          </div>
+        `).join('');
+        
+        cartTotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+      }
+      
+      cartTotalElement.textContent = `GHS ${cartTotal.toLocaleString()}`;
+    }
+
+    function removeFromCart(productName) {
+      cart = cart.filter(item => item.name !== productName);
+      updateCartDisplay();
+    }
+
+    // Category filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const productCards = document.querySelectorAll('.product-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+          
+          // Update button styles
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-orange-600', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-gray-700');
+          });
+          this.classList.remove('bg-gray-200', 'text-gray-700');
+          this.classList.add('bg-orange-600', 'text-white');
+          
+          // Filter products
+          productCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+
+  <script>
+    // Shopping Cart functionality
+    let cart = JSON.parse(localStorage.getItem('safetyProCart')) || [];
+
+    function updateCartDisplay() {
+      const cartCount = document.getElementById('cart-count');
+      const cartItems = document.getElementById('cartItems');
+      const cartFooter = document.getElementById('cartFooter');
+      const cartTotal = document.getElementById('cartTotal');
+
+      // Calculate total items and total price with proper number handling
+      const totalItems = cart.reduce((sum, item) => sum + parseInt(item.quantity), 0);
+      const totalPrice = cart.reduce((sum, item) => {
+        const itemPrice = parseFloat(item.price);
+        const itemQuantity = parseInt(item.quantity);
+        return sum + (itemPrice * itemQuantity);
+      }, 0);
+
+      // Update cart count display
+      cartCount.textContent = totalItems;
+      
+      if (totalItems > 0) {
+        cartCount.style.display = 'flex';
+      } else {
+        cartCount.style.display = 'none';
+      }
+
+      if (cart.length === 0) {
+        cartItems.innerHTML = '<div id="emptyCart" class="text-center py-12"><i class="fas fa-shopping-cart text-6xl text-gray-300 mb-4"></i><p class="text-gray-500 text-lg">Your cart is empty</p><p class="text-gray-400 text-sm">Add some products to get started</p></div>';
+        cartFooter.classList.add('hidden');
+      } else {
+        cartFooter.classList.remove('hidden');
+        
+        // Calculate total with proper number handling
+        const total = cart.reduce((sum, item) => {
+          const itemPrice = parseFloat(item.price);
+          const itemQuantity = parseInt(item.quantity);
+          return sum + (itemPrice * itemQuantity);
+        }, 0);
+        
+        cartTotal.textContent = `GHS ${total.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+
+        // Generate cart items HTML with proper calculations
+        cartItems.innerHTML = cart.map(item => {
+          const itemPrice = parseFloat(item.price);
+          const itemQuantity = parseInt(item.quantity);
+          const itemTotal = itemPrice * itemQuantity;
+          
+          return `
+          <div class="flex items-center gap-4 p-4 border-b border-gray-100">
+            <div class="flex-1">
+              <h4 class="font-semibold text-gray-800">${item.name}</h4>
+              <p class="text-orange-600 font-bold">GHS ${itemPrice.toLocaleString()} each</p>
+              <p class="text-sm text-gray-600">Subtotal: GHS ${itemTotal.toLocaleString()}</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="updateQuantity('${item.id}', ${itemQuantity - 1})" class="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition">
+                <i class="fas fa-minus text-xs"></i>
+              </button>
+              <span class="w-8 text-center font-semibold">${itemQuantity}</span>
+              <button onclick="updateQuantity('${item.id}', ${itemQuantity + 1})" class="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition">
+                <i class="fas fa-plus text-xs"></i>
+              </button>
+            </div>
+            <button onclick="removeFromCart('${item.id}')" class="text-red-500 hover:text-red-700 ml-2 transition">
+              <i class="fas fa-trash text-sm"></i>
+            </button>
+          </div>
+        `;
+        }).join('');
+      }
+
+      // Save to localStorage
+      localStorage.setItem('safetyProCart', JSON.stringify(cart));
+    }
+
+    function addToCart(productName, price) {
+      const productId = productName.toLowerCase().replace(/\s+/g, '-');
+      const existingItem = cart.find(item => item.id === productId);
+
+      if (existingItem) {
+        existingItem.quantity = parseInt(existingItem.quantity) + 1;
+      } else {
+        cart.push({
+          id: productId,
+          name: productName,
+          price: parseFloat(price),
+          quantity: 1
+        });
+      }
+
+      updateCartDisplay();
+      
+      // Show success message
+      const button = event.target;
+      const originalText = button.innerHTML;
+      button.innerHTML = '<i class="fas fa-check mr-2"></i>Added!';
+      button.classList.remove('from-orange-600', 'to-orange-700');
+      button.classList.add('bg-green-600');
+      
+      setTimeout(() => {
+        button.innerHTML = originalText;
+        button.classList.remove('bg-green-600');
+        button.classList.add('from-orange-600', 'to-orange-700');
+      }, 1500);
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(item => item.id !== productId);
+      updateCartDisplay();
+    }
+
+    function updateQuantity(productId, newQuantity) {
+      if (newQuantity <= 0) {
+        removeFromCart(productId);
+        return;
+      }
+
+      const item = cart.find(item => item.id === productId);
+      if (item) {
+        item.quantity = parseInt(newQuantity);
+        updateCartDisplay();
+      }
+    }
+
+    function toggleCart() {
+      const cartSidebar = document.getElementById('cartSidebar');
+      const cartOverlay = document.getElementById('cartOverlay');
+      
+      if (cartSidebar.classList.contains('translate-x-full')) {
+        cartSidebar.classList.remove('translate-x-full');
+        cartOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      } else {
+        cartSidebar.classList.add('translate-x-full');
+        cartOverlay.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Paystack Payment Integration
+    function initiatePayment() {
+      if (cart.length === 0) {
+        alert('Your cart is empty. Please add some products first.');
+        return;
+      }
+
+      const total = cart.reduce((sum, item) => {
+        const itemPrice = parseFloat(item.price);
+        const itemQuantity = parseInt(item.quantity);
+        return sum + (itemPrice * itemQuantity);
+      }, 0);
+      const totalInKobo = Math.round(total * 100); // Paystack expects amount in kobo (smallest currency unit)
+
+      const handler = PaystackPop.setup({
+        key: 'pk_live_e59458b3e843d938a29ceb8eca7bc50cedbc2e73', // Your Paystack live public key
+        email: 'customer@safetyproinstallations.com', // You can make this dynamic
+        amount: totalInKobo,
+        currency: 'GHS',
+        ref: 'SP_' + Math.floor((Math.random() * 1000000000) + 1), // Generate unique reference
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "Cart Items",
+              variable_name: "cart_items",
+              value: cart.map(item => `${item.name} (${item.quantity}x)`).join(', ')
+            }
+          ]
+        },
+        callback: function(response) {
+          // Payment successful
+          alert('Payment successful! Reference: ' + response.reference);
+          
+          // Clear cart after successful payment
+          cart = [];
+          updateCartDisplay();
+          
+          // Close cart
+          toggleCart();
+          
+          // You can send the reference to your backend for verification
+          console.log('Payment Reference:', response.reference);
+        },
+        onClose: function() {
+          alert('Payment was cancelled');
+        }
+      });
+      
+      handler.openIframe();
+    }
+
+    // Search functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCartDisplay(); // Initialize cart display
+      
+      const searchInput = document.getElementById('searchInput');
+      const productCards = document.querySelectorAll('.product-card');
+      
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase().trim();
+        
+        productCards.forEach(card => {
+          const productName = card.querySelector('h3').textContent.toLowerCase();
+          const productDescription = card.querySelector('p').textContent.toLowerCase();
+          
+          if (searchTerm === '' || 
+              productName.includes(searchTerm) || 
+              productDescription.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        
+        // Reset category filters when searching
+        if (searchTerm !== '') {
+          const filterButtons = document.querySelectorAll('.filter-btn');
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-orange-600', 'text-white');
+            btn.classList.add('bg-gray-200', 'text-gray-700');
+          });
+          // Activate "All Products" button
+          filterButtons[0].classList.remove('bg-gray-200', 'text-gray-700');
+          filterButtons[0].classList.add('bg-orange-600', 'text-white');
+        }
+      });
+    });
+
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      }
+    }
+  </script>
+
+</body>
+</html>

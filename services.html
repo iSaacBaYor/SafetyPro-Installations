@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety Pro Installations - Premium Smart Home Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .hero-gradient {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 25%, #dc2626 50%, #b91c1c 75%, #991b1b 100%);
+    }
+    .service-card {
+      transition: all 0.4s ease;
+      background: linear-gradient(145deg, #ffffff, #f8fafc);
+    }
+    .service-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.25);
+    }
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    @keyframes floating {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #f97316, #dc2626);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .slide-in {
+      animation: slideIn 0.8s ease-out;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .pulse-glow {
+      animation: pulseGlow 2s ease-in-out infinite alternate;
+    }
+    @keyframes pulseGlow {
+      from { box-shadow: 0 0 20px rgba(249, 115, 22, 0.4); }
+      to { box-shadow: 0 0 30px rgba(249, 115, 22, 0.8); }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-orange-50 text-gray-900">
+
+<!-- Enhanced Navbar -->
+<nav class="bg-gradient-to-r from-orange-600 to-orange-700 shadow-xl fixed w-full top-0 z-50 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo / Brand -->
+      <a href="index.html" class="text-white font-extrabold text-xl flex items-center floating">
+        <i class="fas fa-shield-alt mr-2"></i>Safety Pro
+      </a>
+      
+      <!-- Menu Items -->
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white text-2xl" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars" id="menuIcon"></i>
+      </button>
+      
+      <!-- Navigation Links - Desktop -->
+      <ul class="hidden md:flex space-x-6 text-white font-semibold">
+        <li><a href="index.html" class="hover:text-orange-200 transition">Home</a></li>
+        <li><a href="services.html" class="text-orange-200 border-b-2 border-white pb-1">Services</a></li>
+        <li><a href="shop.html" class="hover:text-orange-200 transition">Shop</a></li>
+        <li><a href="about.html" class="hover:text-orange-200 transition">About</a></li>
+        <li><a href="contact.html" class="hover:text-orange-200 transition">Contact</a></li>
+      </ul>
+    </div>
+    
+    <!-- Mobile Menu - Hidden by default -->
+    <div class="md:hidden hidden bg-orange-700 border-t border-orange-600" id="mobileMenu">
+      <ul class="py-4 space-y-2">
+        <li><a href="index.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">Home</a></li>
+        <li><a href="services.html" class="block px-4 py-2 text-orange-200 border-l-4 border-white">Services</a></li>
+        <li><a href="shop.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">Shop</a></li>
+        <li><a href="about.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">About</a></li>
+        <li><a href="contact.html" class="block px-4 py-2 text-white hover:text-orange-200 hover:bg-orange-600 transition">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Enhanced Hero Section -->
+  <section class="relative hero-gradient text-white py-32 mt-16 overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative max-w-6xl mx-auto px-6 text-center slide-in">
+      <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
+        <span class="text-sm font-semibold">🏆 Premium Smart Home Solutions</span>
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        Our <span class="text-yellow-300">Services</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+        Transform your home with cutting-edge security and automation technology. 
+        Professional installation, lifetime support, and guaranteed satisfaction.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="#services-grid" class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl">
+          Explore Services
+        </a>
+        <a href="#pricing" class="bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition transform hover:scale-105 shadow-xl">
+          View Pricing
+        </a>
+        <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition">
+          Get in Touch
+        </a>
+      </div>
+      
+      <!-- Service Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-2xl font-bold">6</div>
+          <div class="text-sm opacity-90">Service Categories</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-2xl font-bold">500+</div>
+          <div class="text-sm opacity-90">Installations</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-2xl font-bold">24/7</div>
+          <div class="text-sm opacity-90">Support</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+          <div class="text-2xl font-bold">98%</div>
+          <div class="text-sm opacity-90">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Services Grid -->
+  <section id="services-grid" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Premium Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Experience the future of home automation with our comprehensive smart home solutions
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Smart Gates & Access Control -->
+        <div class="service-card rounded-3xl shadow-xl p-8 text-center border border-gray-100">
+          <div class="bg-gradient-to-br from-orange-100 to-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-door-open text-4xl text-orange-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Gates & Access</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Advanced automated gate systems with biometric access, remote control, and smartphone integration for ultimate security.
+          </p>
+          <div class="space-y-2 mb-6 text-left">
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Fingerprint & facial recognition
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Mobile app control
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Backup power systems
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Activity logging & alerts
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-orange-600 mb-4">From GHS 2,500</div>
+          <a href="contact.html" class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-full font-semibold hover:from-orange-700 hover:to-red-700 transition transform hover:scale-105 inline-block">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Smart Lighting Systems -->
+        <div class="service-card rounded-3xl shadow-xl p-8 text-center border border-gray-100">
+          <div class="bg-gradient-to-br from-yellow-100 to-orange-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-lightbulb text-4xl text-yellow-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Smart Lighting</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Intelligent lighting systems that adapt to your schedule, mood, and preferences while maximizing energy efficiency.
+          </p>
+          <div class="space-y-2 mb-6 text-left">
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Voice & app control
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Automated schedules
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Color & brightness adjustment
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Energy monitoring
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-orange-600 mb-4">From GHS 1,800</div>
+          <a href="contact.html" class="bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:from-yellow-600 hover:to-orange-700 transition transform hover:scale-105 inline-block">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- CCTV Security Systems -->
+        <div class="service-card rounded-3xl shadow-xl p-8 text-center border border-gray-100">
+          <div class="bg-gradient-to-br from-blue-100 to-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-video text-4xl text-blue-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">CCTV Security</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Professional-grade surveillance systems with 4K cameras, night vision, and AI-powered motion detection.
+          </p>
+          <div class="space-y-2 mb-6 text-left">
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              4K Ultra HD recording
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Night vision technology
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Cloud storage & backup
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Mobile alerts & live view
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-orange-600 mb-4">From GHS 3,200</div>
+          <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-700 hover:to-indigo-700 transition transform hover:scale-105 inline-block">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Climate Control -->
+        <div class="service-card rounded-3xl shadow-xl p-8 text-center border border-gray-100">
+          <div class="bg-gradient-to-br from-green-100 to-teal-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-thermometer-half text-4xl text-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Climate Control</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Smart HVAC systems and thermostats that learn your preferences and optimize comfort while reducing energy costs.
+          </p>
+          <div class="space-y-2 mb-6 text-left">
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Learning thermostats
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Zone-based control
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Energy optimization
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Remote monitoring
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-orange-600 mb-4">From GHS 2,800</div>
+          <a href="contact.html" class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:from-green-700 hover:to-teal-700 transition transform hover:scale-105 inline-block">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Audio Systems -->
+        <div class="service-card rounded-3xl shadow-xl p-8 text-center border border-gray-100">
+          <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-volume-up text-4xl text-purple-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Audio Systems</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Premium multi-room audio solutions with wireless streaming, voice control, and crystal-clear sound quality.
+          </p>
+          <div class="space-y-2 mb-6 text-left">
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Multi-room synchronization
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Wireless streaming
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Voice assistant integration
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              High-fidelity speakers
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-orange-600 mb-4">From GHS 2,200</div>
+          <a href="contact.html" class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition transform hover:scale-105 inline-block">
+            Get Quote
+          </a>
+        </div>
+
+        <!-- Energy Management -->
+        <div class="service-card rounded-3xl shadow-xl p-8 text-center border border-gray-100">
+          <div class="bg-gradient-to-br from-emerald-100 to-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <i class="fas fa-bolt text-4xl text-green-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Energy Management</h3>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Smart energy monitoring, solar integration, and automated power management for sustainable, cost-effective living.
+          </p>
+          <div class="space-y-2 mb-6 text-left">
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Solar panel integration
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Real-time monitoring
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Automated optimization
+            </div>
+            <div class="flex items-center text-sm text-gray-700">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              Battery backup systems
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-orange-600 mb-4">From GHS 4,500</div>
+          <a href="contact.html" class="bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-full font-semibold hover:from-emerald-700 hover:to-green-700 transition transform hover:scale-105 inline-block">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Packages & Pricing -->
+  <section id="pricing" class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Service Packages</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Choose the perfect package for your smart home transformation
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Basic Package -->
+        <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 relative">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Smart Starter</h3>
+            <div class="text-4xl font-bold text-orange-600 mb-2">GHS 3,500</div>
+            <p class="text-gray-600">Perfect for beginners</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Basic smart lighting (3 rooms)</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Smart door lock</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Mobile app setup</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Basic installation</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>6 months support</span>
+            </li>
+          </ul>
+          <a href="contact.html" class="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-6 rounded-full font-semibold hover:from-orange-700 hover:to-red-700 transition transform hover:scale-105 block text-center">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="bg-white rounded-3xl shadow-xl p-8 border-2 border-orange-500 relative pulse-glow">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-orange-500 text-white px-6 py-2 rounded-full text-sm font-semibold">MOST POPULAR</span>
+          </div>
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Smart Home Pro</h3>
+            <div class="text-4xl font-bold text-orange-600 mb-2">GHS 8,500</div>
+            <p class="text-gray-600">Complete smart home solution</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Full home smart lighting</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>4-camera CCTV system</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Smart gate & access control</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Climate control system</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Professional installation</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>2 years warranty & support</span>
+            </li>
+          </ul>
+          <a href="contact.html" class="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-6 rounded-full font-semibold hover:from-orange-700 hover:to-red-700 transition transform hover:scale-105 block text-center">
+            Choose Pro
+          </a>
+        </div>
+
+        <!-- Enterprise Package -->
+        <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 relative">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Smart Luxury</h3>
+            <div class="text-4xl font-bold text-orange-600 mb-2">GHS 15,000+</div>
+            <p class="text-gray-600">Ultimate luxury experience</p>
+          </div>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Everything in Pro package</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Multi-room audio system</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Solar energy management</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Advanced security sensors</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Custom automation scenes</span>
+            </li>
+            <li class="flex items-center">
+              <span class="text-green-500 mr-3">✓</span>
+              <span>Lifetime support</span>
+            </li>
+          </ul>
+          <a href="contact.html" class="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 px-6 rounded-full font-semibold hover:from-orange-700 hover:to-red-700 transition transform hover:scale-105 block text-center">
+            Go Luxury
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Process -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">How We Work</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Our proven 5-step process ensures seamless installation and setup
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-orange-100 to-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">📞</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">1. Consultation</h3>
+          <p class="text-gray-600 text-sm">Free consultation to understand your needs and preferences</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-blue-100 to-indigo-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">📋</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">2. Site Survey</h3>
+          <p class="text-gray-600 text-sm">Detailed assessment of your property and technical requirements</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-green-100 to-teal-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">💡</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">3. Design</h3>
+          <p class="text-gray-600 text-sm">Custom system design tailored to your home and lifestyle</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-purple-100 to-pink-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🔧</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">4. Installation</h3>
+          <p class="text-gray-600 text-sm">Professional installation by certified technicians</p>
+        </div>
+        
+        <div class="text-center">
+          <div class="bg-gradient-to-br from-emerald-100 to-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">✅</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">5. Support</h3>
+          <p class="text-gray-600 text-sm">Ongoing support, training, and maintenance services</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Watch Our Installation Process -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Watch Our Installation Process</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          See our professional team in action as we transform homes with cutting-edge smart technology
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- Video 1: CCTV Installation -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div class="relative">
+            <video 
+              class="w-full h-64 object-cover" 
+              controls 
+              preload="metadata"
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280'%3ECCTV Installation%3C/text%3E%3C/svg%3E">
+              <source src="assets/videos/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 left-4">
+              <span class="bg-orange-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <i class="fas fa-video mr-1"></i>CCTV Setup
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Professional CCTV Installation</h3>
+            <p class="text-gray-600 text-sm mb-4">Watch our experts install a complete 4K CCTV system with strategic camera placement and network configuration.</p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500"><i class="fas fa-clock mr-1"></i>Duration: 2-3 hours</span>
+              <span class="text-orange-600 font-semibold">Professional Grade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 2: Smart Lock Installation -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div class="relative">
+            <video 
+              class="w-full h-64 object-cover" 
+              controls 
+              preload="metadata"
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280'%3ESmart Lock Setup%3C/text%3E%3C/svg%3E">
+              <source src="assets/videos/video1.mp4.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 left-4">
+              <span class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <i class="fas fa-lock mr-1"></i>Smart Lock
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Biometric Smart Lock Setup</h3>
+            <p class="text-gray-600 text-sm mb-4">See how we install and configure advanced biometric door locks with app integration and backup systems.</p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500"><i class="fas fa-clock mr-1"></i>Duration: 1-2 hours</span>
+              <span class="text-blue-600 font-semibold">High Security</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 3: Smart Lighting System -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div class="relative">
+            <video 
+              class="w-full h-64 object-cover" 
+              controls 
+              preload="metadata"
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280'%3ELighting Installation%3C/text%3E%3C/svg%3E">
+              <source src="assets/videos/video111.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 left-4">
+              <span class="bg-yellow-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <i class="fas fa-lightbulb mr-1"></i>Smart Lights
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Smart Lighting Installation</h3>
+            <p class="text-gray-600 text-sm mb-4">Complete smart lighting system setup with voice control, scheduling, and energy-efficient LED technology.</p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500"><i class="fas fa-clock mr-1"></i>Duration: 3-4 hours</span>
+              <span class="text-yellow-600 font-semibold">Energy Efficient</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 4: Security System Integration -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div class="relative">
+            <video 
+              class="w-full h-64 object-cover" 
+              controls 
+              preload="metadata"
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280'%3ESecurity Integration%3C/text%3E%3C/svg%3E">
+              <source src="assets/videos/video112411.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 left-4">
+              <span class="bg-red-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <i class="fas fa-shield-alt mr-1"></i>Security
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Complete Security Integration</h3>
+            <p class="text-gray-600 text-sm mb-4">Watch how we integrate multiple security systems into one unified smart home security solution.</p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500"><i class="fas fa-clock mr-1"></i>Duration: 4-6 hours</span>
+              <span class="text-red-600 font-semibold">Maximum Security</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 5: Home Automation Setup -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div class="relative">
+            <video 
+              class="w-full h-64 object-cover" 
+              controls 
+              preload="metadata"
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280'%3EHome Automation%3C/text%3E%3C/svg%3E">
+              <source src="assets/videos/video123.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 left-4">
+              <span class="bg-purple-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <i class="fas fa-home mr-1"></i>Automation
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Home Automation Setup</h3>
+            <p class="text-gray-600 text-sm mb-4">Complete home automation system installation with climate control, lighting, and security integration.</p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500"><i class="fas fa-clock mr-1"></i>Duration: 6-8 hours</span>
+              <span class="text-purple-600 font-semibold">Full Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video 6: Solar Security Camera -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300">
+          <div class="relative">
+            <video 
+              class="w-full h-64 object-cover" 
+              controls 
+              preload="metadata"
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%236b7280'%3ESolar Camera Setup%3C/text%3E%3C/svg%3E">
+              <source src="assets/videos/video1vv.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 left-4">
+              <span class="bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                <i class="fas fa-solar-panel mr-1"></i>Solar Powered
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Solar Security Camera Installation</h3>
+            <p class="text-gray-600 text-sm mb-4">Eco-friendly solar-powered security camera setup with wireless connectivity and weather-resistant housing.</p>
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-gray-500"><i class="fas fa-clock mr-1"></i>Duration: 2-3 hours</span>
+              <span class="text-green-600 font-semibold">Eco-Friendly</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Video Section Call-to-Action -->
+      <div class="text-center mt-16">
+        <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 max-w-4xl mx-auto">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Ready to Transform Your Home?</h3>
+          <p class="text-gray-600 mb-6">Our professional installation team brings years of experience and cutting-edge technology to every project.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="bg-gradient-to-r from-orange-600 to-orange-700 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-700 hover:to-orange-800 transition transform hover:scale-105">
+              <i class="fas fa-calendar-alt mr-2"></i>Schedule Installation
+            </a>
+            <a href="shop.html" class="border-2 border-orange-600 text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-orange-50 transition">
+              <i class="fas fa-shopping-cart mr-2"></i>View Products
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Enhanced CTA Section -->
+  <section class="relative hero-gradient text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Home?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Join 500+ satisfied customers who've upgraded to smart living. Get your free consultation today!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="contact.html" class="bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105 shadow-xl">
+          📞 Get Free Quote
+        </a>
+        <a href="shop.html" class="bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition transform hover:scale-105 shadow-xl border-2 border-white">
+          🛒 Shop Products
+        </a>
+        <a href="about.html" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-orange-600 transition">
+          👥 Meet Our Team
+        </a>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+          <div class="text-3xl mb-2">📧</div>
+          <div class="font-semibold">Email Us</div>
+          <div class="text-sm opacity-90">safetyproinstallations@gmail.com</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+          <div class="text-3xl mb-2">📞</div>
+          <div class="font-semibold">Call Us</div>
+          <div class="text-sm opacity-90">+233 24 123 4567</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+          <div class="text-3xl mb-2">📍</div>
+          <div class="font-semibold">Visit Us</div>
+          <div class="text-sm opacity-90">Accra, Ghana</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Videos Section -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">See Our Work in Action</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Follow our latest installations and security solutions on Instagram. Watch how we transform homes across Ghana.
+        </p>
+      </div>
+      
+      <!-- Video Preview Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="video-preview">
+        <!-- Video Card 1 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative group">
+            <video class="w-full h-64 object-cover" controls poster="">
+              <source src="assets/videos/video1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                <i class="fas fa-video mr-1"></i>Installation
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Professional security system installation demonstration...</p>
+            <div class="flex items-center justify-between mt-3">
+              <span class="text-xs text-gray-400">Recent</span>
+              <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+                 class="text-orange-500 hover:text-orange-600 text-sm font-medium">
+                View on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative group">
+            <video class="w-full h-64 object-cover" controls poster="">
+              <source src="assets/videos/video111.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                <i class="fas fa-video mr-1"></i>Smart Lock
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Smart lock installation process and security features demonstration...</p>
+            <div class="flex items-center justify-between mt-3">
+              <span class="text-xs text-gray-400">Recent</span>
+              <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+                 class="text-orange-500 hover:text-orange-600 text-sm font-medium">
+                View on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative group">
+            <video class="w-full h-64 object-cover" controls poster="">
+              <source src="assets/videos/video123.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                <i class="fas fa-video mr-1"></i>Lighting
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Automated lighting system setup with voice control integration...</p>
+            <div class="flex items-center justify-between mt-3">
+              <span class="text-xs text-gray-400">Recent</span>
+              <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+                 class="text-orange-500 hover:text-orange-600 text-sm font-medium">
+                View on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expanded Video Gallery (Hidden by default) -->
+      <div class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" id="video-expanded">
+        <!-- Additional Video Cards -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative group">
+            <video class="w-full h-64 object-cover" controls poster="assets/PRODUCTS camera.jpg">
+              <source src="assets/videos/video112411.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                <i class="fas fa-video mr-1"></i>Security
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Complete home security system installation and testing...</p>
+            <div class="flex items-center justify-between mt-3">
+              <span class="text-xs text-gray-400">This Week</span>
+              <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+                 class="text-orange-500 hover:text-orange-600 text-sm font-medium">
+                View on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative group">
+            <video class="w-full h-64 object-cover" controls poster="assets/PRODUCTS alexa show.jpg">
+              <source src="assets/videos/video1vv.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                <i class="fas fa-video mr-1"></i>Climate
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Smart climate control system with automated temperature management...</p>
+            <div class="flex items-center justify-between mt-3">
+              <span class="text-xs text-gray-400">This Week</span>
+              <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+                 class="text-orange-500 hover:text-orange-600 text-sm font-medium">
+                View on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative group">
+            <video class="w-full h-64 object-cover" controls poster="assets/PRODUCTS gate motor.jpg">
+              <source src="assets/videos/videogg.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <div class="absolute top-4 right-4">
+              <div class="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
+                <i class="fas fa-video mr-1"></i>Gates
+              </div>
+            </div>
+          </div>
+          <div class="p-4">
+            <p class="text-gray-600 text-sm leading-relaxed">Automated gate system with smartphone control and security features...</p>
+            <div class="flex items-center justify-between mt-3">
+              <span class="text-xs text-gray-400">Last Week</span>
+              <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+                 class="text-orange-500 hover:text-orange-600 text-sm font-medium">
+                View on Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Read More Button -->
+      <div class="text-center">
+        <button id="readMoreBtn" onclick="toggleVideoGallery()" 
+                class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-orange-600 hover:to-red-600 transition transform hover:scale-105 shadow-xl">
+          <i class="fas fa-chevron-down mr-2"></i>
+          <span id="btnText">See More Videos</span>
+        </button>
+        
+        <div class="mt-8">
+          <a href="https://www.instagram.com/safetypro_installations" target="_blank" 
+             class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-600 hover:to-pink-600 transition transform hover:scale-105">
+            <i class="fab fa-instagram mr-2"></i>
+            Follow Us on Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleVideoGallery() {
+      const expandedSection = document.getElementById('video-expanded');
+      const button = document.getElementById('readMoreBtn');
+      const btnText = document.getElementById('btnText');
+      const btnIcon = button.querySelector('i');
+      
+      if (expandedSection.classList.contains('hidden')) {
+        // Show expanded gallery
+        expandedSection.classList.remove('hidden');
+        expandedSection.classList.add('grid');
+        btnText.textContent = 'Show Less';
+        btnIcon.classList.remove('fa-chevron-down');
+        btnIcon.classList.add('fa-chevron-up');
+        
+        // Smooth scroll to expanded content
+        setTimeout(() => {
+          expandedSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      } else {
+        // Hide expanded gallery
+        expandedSection.classList.add('hidden');
+        expandedSection.classList.remove('grid');
+        btnText.textContent = 'See More Videos';
+        btnIcon.classList.remove('fa-chevron-up');
+        btnIcon.classList.add('fa-chevron-down');
+        
+        // Scroll back to the button
+        button.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 flex items-center">
+            <i class="fas fa-shield-alt mr-2"></i>Safety Pro
+          </h3>
+          <p class="text-gray-300 mb-4">Your trusted partner for smart home security solutions in Ghana.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/safetypro_installations?igsh=enNwdWpsa29tZ2lm" target="_blank" class="text-gray-300 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@safetypro_installations?_t=ZM-8zdUZj5dp49&_r=1" target="_blank" class="text-gray-300 hover:text-white transition"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Products</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#" class="hover:text-white transition">CCTV Cameras</a></li>
+            <li><a href="#" class="hover:text-white transition">Smart Locks</a></li>
+            <li><a href="#" class="hover:text-white transition">Lighting Systems</a></li>
+            <li><a href="#" class="hover:text-white transition">Security Sensors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Contact Info</h4>
+          <div class="space-y-2 text-gray-300">
+            <p>📧 safetyproinstallations@gmail.com</p>
+            <p>📞 +233 24 123 4567</p>
+            <p>📍 Accra, Ghana</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 Safety Pro Installations. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuIcon = document.getElementById('menuIcon');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+      }
+    }
+  </script>
+
+</body>
+</html>
